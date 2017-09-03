@@ -1,6 +1,11 @@
-
-                {
-                    "name": "myapp",
-                    "app_id": "com.imabuilder.anaskinet.myapp",
-                    "type": "ionic1"
-                }
+{
+  "name": "soshogar",
+  "app_id": "com.imabuilder.aplicacionesmovilesuy.soshogar",
+  "type": "ionic1",
+  "integrations": {
+    "gulp": {}
+  },
+  "watchPatterns": [
+    "scss/**/*"
+  ]
+}

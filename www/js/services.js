@@ -1,4 +1,4 @@
-angular.module("myapp.services", [])
+angular.module("soshogar.services", [])
 // TODO: --|---- directive
 	
 // TODO: --|-------- sound-touch
@@ -600,3 +600,4 @@ angular.module("myapp.services", [])
 	};
 })
 				
+

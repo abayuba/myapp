@@ -1,7 +1,7 @@
-angular.module("myapp", ["ngCordova","ionic","ionMdInput","ionic-material","ion-datetime-picker","ionic.rating","utf8-base64","angular-md5","chart.js","ionicLazyLoad","myapp.controllers", "myapp.services"])
+angular.module("soshogar", ["ngCordova","ionic","ionMdInput","ionic-material","ion-datetime-picker","ionic.rating","utf8-base64","angular-md5","chart.js","ionicLazyLoad","soshogar.controllers", "soshogar.services"])
 	.run(function($ionicPlatform,$window,$interval,$timeout,$ionicHistory,$ionicPopup,$state,$rootScope){
 
-		$rootScope.appName = "MyApp" ;
+		$rootScope.appName = "soshogar" ;
 		$rootScope.appLogo = "data/images/header/logo.png" ;
 		$rootScope.appVersion = "1.0" ;
 
@@ -113,24 +113,23 @@ angular.module("myapp", ["ngCordova","ionic","ionMdInput","ionic-material","ion-
 			"self",
 			new RegExp('^(http[s]?):\/\/(w{3}.)?youtube\.com/.+$'),
 			new RegExp('^(http[s]?):\/\/(w{3}.)?w3schools\.com/.+$'),
-			new RegExp('^(http[s]?):\/\/(w{3}.)?ihsana\.net/.+$'),
 		]);
 	}catch(err){
 		console.log("%cerror: %cdomain whitelist","color:blue;font-size:16px;","color:red;font-size:16px;");
 	}
 	$stateProvider
-	.state("myapp",{
-		url: "/myapp",
+	.state("soshogar",{
+		url: "/soshogar",
 			abstract: true,
-			templateUrl: "templates/myapp-side_menus.html",
+			templateUrl: "templates/soshogar-side_menus.html",
 			controller: "side_menusCtrl",
 	})
 
-	.state("myapp.about_us", {
+	.state("soshogar.about_us", {
 		url: "/about_us",
 		views: {
-			"myapp-side_menus" : {
-						templateUrl:"templates/myapp-about_us.html",
+			"soshogar-side_menus" : {
+						templateUrl:"templates/soshogar-about_us.html",
 						controller: "about_usCtrl"
 					},
 			"fabButtonUp" : {
@@ -139,11 +138,11 @@ angular.module("myapp", ["ngCordova","ionic","ionMdInput","ionic-material","ion-
 		}
 	})
 
-	.state("myapp.dashboard", {
+	.state("soshogar.dashboard", {
 		url: "/dashboard",
 		views: {
-			"myapp-side_menus" : {
-						templateUrl:"templates/myapp-dashboard.html",
+			"soshogar-side_menus" : {
+						templateUrl:"templates/soshogar-dashboard.html",
 						controller: "dashboardCtrl"
 					},
 			"fabButtonUp" : {
@@ -152,11 +151,11 @@ angular.module("myapp", ["ngCordova","ionic","ionMdInput","ionic-material","ion-
 		}
 	})
 
-	.state("myapp.faqs", {
+	.state("soshogar.faqs", {
 		url: "/faqs",
 		views: {
-			"myapp-side_menus" : {
-						templateUrl:"templates/myapp-faqs.html",
+			"soshogar-side_menus" : {
+						templateUrl:"templates/soshogar-faqs.html",
 						controller: "faqsCtrl"
 					},
 			"fabButtonUp" : {
@@ -165,11 +164,37 @@ angular.module("myapp", ["ngCordova","ionic","ionMdInput","ionic-material","ion-
 		}
 	})
 
-	.state("myapp.slide_tab_menu", {
+	.state("soshogar.menu_1", {
+		url: "/menu_1",
+		views: {
+			"soshogar-side_menus" : {
+						templateUrl:"templates/soshogar-menu_1.html",
+						controller: "menu_1Ctrl"
+					},
+			"fabButtonUp" : {
+						template: '',
+					},
+		}
+	})
+
+	.state("soshogar.menu_2", {
+		url: "/menu_2",
+		views: {
+			"soshogar-side_menus" : {
+						templateUrl:"templates/soshogar-menu_2.html",
+						controller: "menu_2Ctrl"
+					},
+			"fabButtonUp" : {
+						template: '',
+					},
+		}
+	})
+
+	.state("soshogar.slide_tab_menu", {
 		url: "/slide_tab_menu",
 		views: {
-			"myapp-side_menus" : {
-						templateUrl:"templates/myapp-slide_tab_menu.html",
+			"soshogar-side_menus" : {
+						templateUrl:"templates/soshogar-slide_tab_menu.html",
 						controller: "slide_tab_menuCtrl"
 					},
 			"fabButtonUp" : {
@@ -178,5 +203,9 @@ angular.module("myapp", ["ngCordova","ionic","ionMdInput","ionic-material","ion-
 		}
 	})
 
-	$urlRouterProvider.otherwise("/myapp/dashboard");
+
+// router by user
+
+
+	$urlRouterProvider.otherwise("/soshogar/dashboard");
 });
