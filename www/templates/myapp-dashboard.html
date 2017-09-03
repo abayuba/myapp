@@ -1,0 +1,43 @@
+	<ion-view view-title="Dashboard" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top" lazy-scroll  id="page-dashboard" class=" page-dashboard">
+		
+		<div class="dashboard-panel">
+			<div class="item item-title item-dark">Dashboard</div>
+			<!-- row -->
+			<div class="row">
+				<a class="col-33 light positive-bg ink" ng-click="openWebView('http://app.soshogar.com.uy/')" >
+					<i class="icon ion-android-favorite" ></i>
+					<p>Webview</p>
+				</a>
+				<a class="col-33 light positive-900-bg ink" ng-click="openAppBrowser('http://app.soshogar.com.uy/')" >
+					<i class="icon ion-help-circled" ></i>
+					<p>inappbrpuser</p>
+				</a>
+				<a class="col-33 light calm-bg ink" ng-click="openAppBrowser('http://anaski.net/')" >
+					<i class="icon ion-android-favorite" ></i>
+					<p>AppBrowser</p>
+				</a>
+			</div>
+			<!-- ./row -->
+			
+
+			<!-- row -->
+			<div class="row">
+				<a class="col-33 light calm-900-bg ink"  ng-href="#/myapp/faqs" >
+					<i class="icon ion-android-chat" ></i>
+					<p>Faqs</p>
+				</a>
+				<a class="col-33 light balanced-bg ink" ng-click="openURL('market://details?id=com.imabuilder.anaskinet.myapp')" >
+					<i class="icon ion-android-playstore" ></i>
+					<p>Rate This App</p>
+				</a>
+			</div>
+			<!-- ./row -->
+			
+
+		</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
